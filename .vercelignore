@@ -1,0 +1,11 @@
+labs/
+docs/
+artifacts/
+scratchpad/
+outline.md
+AGENT.md
+STATUS.md
+apps/web/
+.env
+.env.*
+!.env.example

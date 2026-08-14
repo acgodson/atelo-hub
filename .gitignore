@@ -1,0 +1,46 @@
+# Secrets and credentials — never commit
+.env
+.env.*
+!.env.example
+!.env.test.example
+*.pem
+*.key
+*.keystore
+*.seed
+secrets/
+credentials/
+artifacts/private/
+
+# Logs that may contain headers/tokens
+logs/
+*.log
+
+# Dependencies and build output
+node_modules/
+.next/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Python
+labs/reference-agent/.venv/
+__pycache__/
+*.egg-info
+
+# OS noise
+.DS_Store
+
+# Lab intermediate working state (not evidence; evidence lives in artifacts/)
+labs/**/.live/
+.live/
+
+# Internal-only — never publish to the public repo (kept local for development)
+outline.md
+AGENT.md
+STATUS.md
+docs/
+artifacts/
+scratchpad/
+labs/
+apps/web/

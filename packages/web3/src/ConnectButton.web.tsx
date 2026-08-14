@@ -5,19 +5,11 @@ import { CHAIN_ID, shortHash } from "@atelo/core";
 import { walletEnabled } from "./env";
 import { useWallet } from "./useWallet";
 
-export function ConnectButton() {
+function WalletConnectButton() {
   const { open } = useAppKit();
   const { address, isConnected, chainId } = useWallet();
   const { disconnect } = useDisconnect();
   const { switchChain, isPending } = useSwitchChain();
-
-  if (!walletEnabled) {
-    return (
-      <View style={[styles.btn, styles.off]}>
-        <Text style={styles.offText}>Wallet off</Text>
-      </View>
-    );
-  }
 
   if (!isConnected || !address) {
     return (
@@ -51,6 +43,16 @@ export function ConnectButton() {
     </View>
   );
 }
+
+function WalletOffButton() {
+  return (
+    <View style={[styles.btn, styles.off]}>
+      <Text style={styles.offText}>Wallet off</Text>
+    </View>
+  );
+}
+
+export const ConnectButton = walletEnabled ? WalletConnectButton : WalletOffButton;
 
 const styles = StyleSheet.create({
   row: { flexDirection: "row", alignItems: "center", gap: 8 },

@@ -1,6 +1,13 @@
 import { useAppKit } from "@reown/appkit/react";
+import { walletEnabled } from "./env";
 
-export function useConnectModal(): { open: () => void } {
+function useAppKitConnectModal(): { open: () => void } {
   const { open } = useAppKit();
   return { open: () => open() };
 }
+
+function useNoopConnectModal(): { open: () => void } {
+  return { open: () => {} };
+}
+
+export const useConnectModal = walletEnabled ? useAppKitConnectModal : useNoopConnectModal;

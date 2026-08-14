@@ -36,12 +36,12 @@ labs/**/.live/
 .live/
 
 # Internal-only — never publish to the public repo (kept local for development)
-outline.md
-AGENT.md
-STATUS.md
-docs/
-artifacts/
-scratchpad/
-labs/
-apps/web/
+/outline.md
+/AGENT.md
+/STATUS.md
+/docs/
+/artifacts/
+/scratchpad/
+/labs/
+/apps/web/
 .vercel

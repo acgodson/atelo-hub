@@ -6,8 +6,10 @@
   "types": "src/index.ts",
   "exports": {
     ".": {
-      "atelo-runtime": "./dist/index.js",
       "types": "./src/index.ts",
+      "react-native": "./src/index.ts",
+      "atelo-runtime": "./dist/index.js",
+      "node": "./dist/index.js",
       "default": "./src/index.ts"
     }
   },

@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter @atelo/mobile exec expo export --platform web",
+  "buildCommand": "pnpm --filter @atelo/core build && pnpm --filter @atelo/reach build && pnpm --filter @atelo/mobile exec expo export --platform web",
   "outputDirectory": "apps/mobile/dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,

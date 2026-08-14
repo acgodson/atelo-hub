@@ -1,3 +1,5 @@
+import { Platform } from "react-native";
+
 export interface TelegramLink {
   wallet: string;
   code: string;
@@ -6,8 +8,9 @@ export interface TelegramLink {
 }
 
 export function reachBaseUrl(): string {
-  const base = process.env.EXPO_PUBLIC_REACH_URL?.trim() || "http://localhost:8787";
-  return base.replace(/\/$/, "");
+  const configured = process.env.EXPO_PUBLIC_REACH_URL?.trim();
+  if (configured) return configured.replace(/\/$/, "");
+  return Platform.OS === "web" ? "/api" : "http://localhost:8787";
 }
 
 export async function requestTelegramLink(wallet: string): Promise<TelegramLink> {

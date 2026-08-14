@@ -1,4 +1,5 @@
 import { REACH_VAPID_PUBLIC_KEY } from "@atelo/core";
+import { reachBaseUrl } from "./linkTelegram";
 import type { PushPermission, PushResult, PushState } from "./registerPush.types";
 
 function urlBase64ToUint8Array(base64: string): Uint8Array {
@@ -42,10 +43,8 @@ export async function getPushState(): Promise<PushState> {
 }
 
 async function postSubscription(subscription: PushSubscription): Promise<void> {
-  const base = process.env.EXPO_PUBLIC_REACH_URL?.trim();
-  if (!base) return;
   try {
-    await fetch(`${base.replace(/\/$/, "")}/subscribe`, {
+    await fetch(`${reachBaseUrl()}/subscribe`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(subscription.toJSON())

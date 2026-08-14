@@ -1,0 +1,51 @@
+{
+  "cli": {
+    "version": ">= 16.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_REOWN_PROJECT_ID": "007f4833ab30323d4bdfd2fe4bd307e1",
+        "EXPO_PUBLIC_REACH_URL": "https://atelo-hub.vercel.app/api"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_REOWN_PROJECT_ID": "007f4833ab30323d4bdfd2fe4bd307e1",
+        "EXPO_PUBLIC_REACH_URL": "https://atelo-hub.vercel.app/api"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "ios": {
+        "distribution": "store"
+      },
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_REOWN_PROJECT_ID": "007f4833ab30323d4bdfd2fe4bd307e1",
+        "EXPO_PUBLIC_REACH_URL": "https://atelo-hub.vercel.app/api"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

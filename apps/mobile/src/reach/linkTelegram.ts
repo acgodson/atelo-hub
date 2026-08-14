@@ -10,7 +10,7 @@ export interface TelegramLink {
 export function reachBaseUrl(): string {
   const configured = process.env.EXPO_PUBLIC_REACH_URL?.trim();
   if (configured) return configured.replace(/\/$/, "");
-  return Platform.OS === "web" ? "/api" : "http://localhost:8787";
+  return Platform.OS === "web" ? "/api" : "https://atelo-hub.vercel.app/api";
 }
 
 export async function requestTelegramLink(wallet: string): Promise<TelegramLink> {

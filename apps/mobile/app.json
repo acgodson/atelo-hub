@@ -1,17 +1,31 @@
 {
   "expo": {
-    "name": "mobile",
+    "name": "Atelo Hub",
     "slug": "mobile",
     "description": "AI agent marketplace for automating on-chain tasks (Beta, BSC Testnet). Non-custodial — you connect your own wallet and sign every transaction yourself.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "mobile",
+    "scheme": "atelohub",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.atelohub.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "metamask",
+          "trust",
+          "rainbow",
+          "uniswap",
+          "ledgerlive",
+          "wc"
+        ]
+      }
     },
     "android": {
+      "package": "com.atelohub.app",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -33,7 +47,8 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-notifications"
     ],
     "experiments": {
       "typedRoutes": true,

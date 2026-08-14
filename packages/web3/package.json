@@ -9,9 +9,13 @@
   },
   "dependencies": {
     "@atelo/core": "workspace:*",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "@reown/appkit": "1.7.8",
     "@reown/appkit-adapter-wagmi": "1.7.8",
+    "@reown/appkit-react-native": "2.0.6",
+    "@reown/appkit-wagmi-react-native": "2.0.6",
     "@tanstack/react-query": "5.101.4",
+    "@walletconnect/react-native-compat": "2.21.10",
     "viem": "2.55.15",
     "wagmi": "2.19.5"
   },

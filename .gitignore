@@ -44,3 +44,4 @@ artifacts/
 scratchpad/
 labs/
 apps/web/
+.vercel
